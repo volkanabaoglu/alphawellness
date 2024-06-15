@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import ImageContainer from '@/components/ImageContainer';
-import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 const images = [
   {
@@ -54,7 +53,6 @@ const HomePage = () => {
           </div>
         ))}
       </div>
-      <WhatsAppIcon /> {/* WhatsApp ikonu burada */}
     </div>
   );
 };
