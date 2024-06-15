@@ -1,14 +1,60 @@
-import Image from 'next/image';
 import React from 'react';
-import logo from '../public/logo.png'; // logo.png dosyasını public klasörüne koyduğunuzu varsayıyoruz
+import Navbar from '@/components/Navbar';
+import ImageContainer from '@/components/ImageContainer';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
+
+const images = [
+  {
+    src: '/testphotofitness.jpg', // Replace with your image paths
+    alt: 'Image 1',
+    description: 'FITNESS'
+  },
+  {
+    src: '/testphotoswim.jpg',
+    alt: 'Image 2',
+    description: 'YÜZME'
+  },
+  {
+    src: '/testphotopilates.jpg',
+    alt: 'Image 3',
+    description: 'REFORMER PİLATES'
+  },
+];
 
 const HomePage = () => {
   return (
-    <div className="w-screen h-screen bg-gradient-to-r from-slate-700 0 to-black flex justify-center items-center">
-      <div className='text-white text-center text-5xl font-extrabold flex flex-row gap-72'>
-        <p className='text-center animate-pulse mt-32 pr-52' >DİKKAT ÇALIŞMA VAAAR!</p>
-        <Image className='rounded-full' src={logo} alt="logo" width={300} height={300} />
+    <div className='bg-black w-screen h-screen  max-h-full flex flex-col'>
+      <Navbar />
+      <div className='relative flex-grow'>
+        {/* <img
+          className='absolute w-full h-full object-cover'
+          src='./testphoto.jpg'
+          alt=""
+        /> */}
+        <div className='absolute inset-0 flex flex-col justify-center items-center gap-6'>
+            <h1 className='text-white md:text-7xl text-5xl font-bold mb-2'>
+              ALPHA FITNESS
+            </h1>
+            <p className='text-white md:text-xl text-lg mb-4'>
+              Isparta'nın En Kapsamlı Spor Salonu
+            </p>
+            <button className='bg-blue-600 text-white py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-700 shadow-lg'>
+              Ailemize Katıl
+            </button>
+        </div>
       </div>
+      <div className='hidden md:flex flex-row justify-center gap-12 p-4'>
+        {images.map((image, index) => (
+          <div key={index} className='w-1/3 h-full relative'>
+            <ImageContainer
+              imageSrc={image.src}
+              altText={image.alt}
+              description={image.description}
+            />
+          </div>
+        ))}
+      </div>
+      <WhatsAppIcon /> {/* WhatsApp ikonu burada */}
     </div>
   );
 };
