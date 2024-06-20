@@ -23,7 +23,6 @@ const images = [
 const HomePage = () => {
   return (
     <div className='bg-black w-screen h-screen  max-h-full flex flex-col'>
-      <Navbar />
       <div className='relative flex-grow'>
         {/* <img
           className='absolute w-full h-full object-cover'
