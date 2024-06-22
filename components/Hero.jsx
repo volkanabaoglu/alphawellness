@@ -14,7 +14,7 @@ const Hero = () => {
                 priority 
             />
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 to-black/60"></div>
-            <div className="container mx-auto h-full flex flex-col justify-center items-center text-center px-4 z-20 relative">
+            <div className="container mx-auto h-full flex flex-col justify-center items-center text-center px-4      relative">
                 <h1 className="text-5xl font-bold mb-4 text-white shadow-lg animate-fadeInLeft">Alpha Wellness'a Hoş Geldiniz</h1>
                 <p className="text-xl mb-4 text-white shadow animate-fadeInRight">Sağlıklı yaşamın kapılarını aralayın.</p>
                 <p className="text-md font-bold mb-8 text-white shadow animate-fadeInRight">Ispartanın En Kapsamlı Spor Kompleksi</p>
