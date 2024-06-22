@@ -14,7 +14,11 @@ module.exports = {
       },
       colors: {
         "navbar": "#3D59BA",
-      }
+        'custom-red': '#f04e3c',
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+    },
     },
 
   },
